@@ -9,6 +9,7 @@ import com.project.mybooks.common.search.Search;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
 import java.util.List;
@@ -23,8 +24,20 @@ public class BookService {
     private final BookmarkMapper bmkMapper;
     private final BookMemoMapper bmmMapper;
 
+    @Transactional
     public boolean saveService(Book book) {
-        return bMapper.save(book);
+        log.info(" /bookService Book - {}", book);
+        boolean flag = bMapper.save(book);
+
+        // 이미지 파일 저장
+        List<String> fileName = book.getFileName();
+        if (fileName != null && fileName.size() != 0){
+            for (String filenames : fileName){
+                bMapper.addFileUpload(filenames);
+            }
+        }
+
+        return flag;
     }
 
     public boolean modifyService(Book book) {

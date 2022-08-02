@@ -3,6 +3,7 @@ package com.project.mybooks.book.domain;
 import lombok.*;
 
 import java.util.Date;
+import java.util.List;
 
 @Setter
 @Getter
@@ -25,5 +26,7 @@ public class Book {
     private int theEnd; // 완결 0 연재중 1
     private Date regDate; // 등록 날짜
     private String bookImg; // 책 표지 이미지
+
+    private List<String> fileName;
 
 }

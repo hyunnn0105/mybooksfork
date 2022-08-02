@@ -44,9 +44,9 @@ class BookMapperTest {
         b.setTheEnd(0);
         System.out.println("b = " + b);
 
-        boolean flag = mapper.save(b);
+//        boolean flag = mapper.save(b);
 
-        assertTrue(flag);
+//        assertTrue(flag);
     }
 
     @Test

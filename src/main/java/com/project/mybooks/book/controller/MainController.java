@@ -15,6 +15,7 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -85,14 +86,14 @@ public class MainController {
 
     // 3. 등록요청 /write (post)
     @PostMapping("/write")
-    public String write(Book book) {
+    public String write(Book book,  @RequestParam("files") List<MultipartFile> fileList) {
         log.info("Main Controller : write POST 요청 - {}", book);
         log.info("curpage 들어오는 값 : {}", book.getCurPage());
         log.info("totalpage 들어오는 값 : {}", book.getTotalPage());
 
-
         boolean b = bService.saveService(book);
         log.info("flag - {}", b);
+
         return "redirect:/book/list";
     }
 
