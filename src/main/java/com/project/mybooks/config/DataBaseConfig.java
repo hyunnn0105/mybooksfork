@@ -19,6 +19,7 @@ public class DataBaseConfig {
 
         config.setJdbcUrl("jdbc:oracle:thin:@localhost:1521:xe");
         config.setDriverClassName("oracle.jdbc.driver.OracleDriver");
+//        config.setDriverClassName("oracle.jdbc.OracleDriver");
 
         return new HikariDataSource(config);
     }

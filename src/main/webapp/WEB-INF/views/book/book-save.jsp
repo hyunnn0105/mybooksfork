@@ -41,6 +41,21 @@
   src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
   integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
   crossorigin="anonymous"></script>
+  <style>
+    .form-group{
+        width: 500px;
+    }
+    .uploadDiv {
+        height: 70px;
+        width: 100%;
+        background: green;
+    }
+    .uploaded-list {
+        height: 50px;
+        width: 100%;
+        background: rgb(82, 164, 227);
+    }
+  </style>
 
 
 <body>
@@ -157,7 +172,7 @@
                                     <span>Drop Here!!</span>
                                 </div>
                                 <div class="uploadDiv">
-                                    <input type="file" name="files" id="ajax-file" style="display:none;">
+                                    <input type="file" name="files" id="ajax-file" style="display:none;" enctype="multipart/form-data">
                                 </div>
                                 <!-- 업로드된 파일의 썸네일을 보여줄 영역 -->
                                 <div class="uploaded-list">
