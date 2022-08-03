@@ -45,8 +45,8 @@
     .form-group{
         width: 500px;
     }
-    .uploadDiv {
-        height: 70px;
+    .fileDrop {
+        height: 200px;
         width: 100%;
         background: green;
     }
@@ -290,8 +290,6 @@
                 const pattern = /jpg$|gif$|png$/i;
                 return originFileName.match(pattern);
 
-                // 내가 쓴 코드 -> if/swich
-                // let endpage = originFileName.substring(originFileName.indexof(".")+1)
             }
 
             function checkExtType(fileName) {
