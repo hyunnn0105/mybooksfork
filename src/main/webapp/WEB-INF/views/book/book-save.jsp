@@ -74,7 +74,12 @@
                     <!-- 이미지 링크 추가하기** -->
                     <!-- drag&drop 영역 추가해주기 -->
                     <div class="right">
-                        <input type="text" name="bookImg">
+
+                        <div class="mb-3">
+                          <label for="formFile" class="form-label">Default file input example</label>
+                          <input class="form-control" type="file" id="formFile" name="bookImg">
+                        </div>
+                        <!-- <input type="text" name="bookImg"> -->
                         
                     </div>
 
@@ -176,7 +181,7 @@
                                 </div>
                                 <!-- 업로드된 파일의 썸네일을 보여줄 영역 -->
                                 <div class="uploaded-list">
-            
+
                                 </div>
                             </div>
 

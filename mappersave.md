@@ -14,13 +14,13 @@
         (
         book_no
         , platform_id, book_title, writer, star_rate, book_comment
-        , cur_page, total_page, the_end
+        , cur_page, total_page, the_end, book_img
         )
         VALUES
         (
         TO_CHAR(SYSDATE, 'YYMMDD') || LPAD(seq_prj_book.nextval, 4, '0')
         , #{platformId}, #{bookTitle}, #{writer}, #{starRate}, #{bookComment}
-        , #{curPage}, #{totalPage}, #{theEnd}
+        , #{curPage}, #{totalPage}, #{theEnd}, #{bookImg}
         )
     </insert>
 
@@ -42,6 +42,7 @@
         , cur_page = #{curPage}
         , total_page = #{totalPage}
         , the_end = #{theEnd}
+        , book_img = #{bookImg}
         WHERE book_no = #{bookNo}
     </update>
 
@@ -82,7 +83,7 @@
         a.user_id, a.importance
         , a.book_no, a.platform_id, b.platform_name
         , a.book_title, a.writer, a.star_rate, a.book_comment
-        , a.cur_page, a.total_page, a.the_end, a.reg_date, b.platform_link
+        , a.cur_page, a.total_page, a.the_end, a.reg_date, a.book_img, b.platform_link
         FROM prj_book a
         LEFT OUTER JOIN prj_platform b
         ON a.platform_id = b.platform_id
@@ -98,7 +99,7 @@
                     a.user_id, a.importance
                     , a.book_no, a.platform_id, b.platform_name
                     , a.book_title, a.writer, a.star_rate, a.book_comment
-                    , a.cur_page, a.total_page, a.the_end, a.reg_date, b.platform_link
+                    , a.cur_page, a.total_page, a.the_end, a.reg_date, a.book_img, b.platform_link
                 FROM prj_book a
                 LEFT OUTER JOIN prj_platform b
                 ON a.platform_id = b.platform_id
@@ -119,7 +120,7 @@
         a.user_id, a.importance
         , a.book_no, a.platform_id, b.platform_name
         , a.book_title, a.writer, a.star_rate, a.book_comment
-        , a.cur_page, a.total_page, a.the_end, a.reg_date , b.platform_link
+        , a.cur_page, a.total_page, a.the_end, a.reg_date ,a.book_img, b.platform_link
         FROM prj_book a
         LEFT OUTER JOIN prj_platform b
         ON a.platform_id = b.platform_id
@@ -181,7 +182,7 @@
             a.user_id, a.importance
             , a.book_no, a.platform_id, b.platform_name
             , a.book_title, a.writer, a.star_rate, a.book_comment
-            , a.cur_page, a.total_page, a.the_end, a.reg_date, b.platform_link
+            , a.cur_page, a.total_page, a.the_end, a.reg_date, a.book_img, b.platform_link
         FROM (
             SELECT
             *
