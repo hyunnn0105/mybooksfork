@@ -156,7 +156,7 @@
                                 <br>
                                 <label class="form-floating mb-3">
                                     <!-- <br><input type="text" id="bookmarkContent-input" name="bookmarkContent" size=""> -->
-                                    북마크 내용 <br><textarea name="bookmarkContent" id="bookmarkContent-input" cols="45"
+                                    북마크 내용 <br><textarea name="bookmarkContent" id="bookmarkContent-input" cols="30"
                                         rows="5"></textarea>
                                     <!-- <input class="form-control" type="text" id="bookmarkContent-input floatingInput" name="bookmarkContent"> -->
                                     <!-- <label for="floatingInput">Content</label> -->
@@ -219,7 +219,7 @@
                                 <label>
                                     메모 <br>
                                     <!-- <input type="text" id="bookmemoContent-input" name="bookMemoContent"> -->
-                                    <textarea name="bookMemoContent" id="bookmemoContent-input" cols="50"
+                                    <textarea name="bookMemoContent" id="bookmemoContent-input" cols="30"
                                         rows="5"></textarea>
                                 </label>
                                 <button id="bookmemo-reg-btn" type="button">등록</button>
@@ -294,11 +294,12 @@
                             내용 : <input id="bookmarkContent-modify" type="text" name="bookmarkContent">
                         </label>
                         <br>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button id="bookmark-modify-btn" type="button" class="btn btn-primary">수정</button>
-                    </form>
+                    <%-- </form> --%>
                     <form action="/book/bookmark-delete" method="post">
                         <input id="bookmarkDelete" type="hidden" name="bookmarkNo" readonly>
                         <button type="submit" class="btn btn-primary">삭제</button>
@@ -330,6 +331,7 @@
                             bookMemoContent : <input id="bookmemoContent-modify" type="text" name="bookMemoContent">
                         </label>
                         <br>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
