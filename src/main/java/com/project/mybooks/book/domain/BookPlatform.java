@@ -27,6 +27,4 @@ public class BookPlatform {
     private Date regDate; // 등록 날짜
     private String bookImg; // 책 표지 이미지
     private String platformLink; // 플랫폼 링크
-
-    private List<String> fileName;
 }

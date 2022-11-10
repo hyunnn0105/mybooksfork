@@ -193,11 +193,5 @@
         ORDER BY a.importance DESC
     </select>
 
-    <insert id="addFileUpload">
-        INSERT INTO prj_file_upload
-        (file_name, bno)
-        VALUES
-        (#{fileName}, TO_CHAR(SYSDATE, 'YYMMDD') || LPAD(seq_prj_book.currval, 4, '0'))
-    </insert>
 
 </mapper>

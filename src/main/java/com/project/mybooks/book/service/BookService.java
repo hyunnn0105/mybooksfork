@@ -30,12 +30,12 @@ public class BookService {
         boolean flag = bMapper.save(book);
 
         // 이미지 파일 저장
-        List<String> fileName = book.getFileName();
-        if (fileName != null && fileName.size() != 0){
-            for (String filenames : fileName){
-                bMapper.addFileUpload(filenames);
-            }
-        }
+//        List<String> fileName = book.getFileName();
+//        if (fileName != null && fileName.size() != 0){
+//            for (String filenames : fileName){
+//                bMapper.addFileUpload(filenames);
+//            }
+//        }
 
         return flag;
     }

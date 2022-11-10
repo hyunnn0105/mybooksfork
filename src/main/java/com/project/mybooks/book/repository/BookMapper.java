@@ -51,6 +51,4 @@ public interface BookMapper {
         // 즐겨찾기 개별 조회
 //        BookPlatform findOneImportance();
 
-        // 파일 첨부 기능
-        void addFileUpload(String fileName);
 }

@@ -27,6 +27,5 @@ public class Book {
     private Date regDate; // 등록 날짜
     private String bookImg; // 책 표지 이미지
 
-    private List<String> fileName;
 
 }

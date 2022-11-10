@@ -86,7 +86,7 @@ public class MainController {
 
     // 3. 등록요청 /write (post)
     @PostMapping("/write")
-    public String write(Book book,  @RequestParam("files") List<MultipartFile> fileList) {
+    public String write(Book book ) {
         log.info("Main Controller : write POST 요청 - {}", book);
         log.info("curpage 들어오는 값 : {}", book.getCurPage());
         log.info("totalpage 들어오는 값 : {}", book.getTotalPage());
