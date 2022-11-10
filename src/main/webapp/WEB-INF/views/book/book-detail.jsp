@@ -35,6 +35,9 @@
             color: #000;
             font-weight: bold;
         }
+        #content-box{
+            display: flex;
+        }
     </style>
 </head>
 
@@ -50,51 +53,53 @@
 
         <div class="detail-page">
             <div class="content">
-                <div class="img">
-                    <img src="${book.bookImg}" class="rounded mx-auto d-block custom-img" alt="책 표지">
-                </div>
+                <div id="content-box">
+                    <div class="img">
+                        <img src="${book.bookImg}" class="rounded mx-auto d-block custom-img" alt="책 표지">
+                    </div>
 
-                <div class="detail-content">
-                    <!-- ${book.theEnd} 추가하기 -->
-                    <div class="left">
-                        <h2>플랫폼</h2>
-                    </div>
-                    <div class="right">
-                        <h3>${book.platformName}</h3>
-                    </div>
-                    <div class="left">
-                        <h2>제목</h2>
-                    </div>
-                    <div class="right">
-                        <h3>${book.bookTitle}</h3>
+                    <div class="detail-content">
+                        <!-- ${book.theEnd} 추가하기 -->
+                        <div class="left">
+                            <h2>플랫폼</h2>
+                        </div>
+                        <div class="right">
+                            <h3>${book.platformName}</h3>
+                        </div>
+                        <div class="left">
+                            <h2>제목</h2>
+                        </div>
+                        <div class="right">
+                            <h3>${book.bookTitle}</h3>
 
-                    </div>
-                    <div class="left">
-                        <h2>작가</h2>
-                    </div>
-                    <div class="right">
-                        <h3>${book.writer}</h3>
-                    </div>
-                    <div class="left">
-                        <h2>별점</h2>
-                    </div>
-                    <div class="right">
-                        <h3>${book.starRate}</h3>
-                    </div>
-                    <!-- <div class="page"> -->
-                    <div class="left">
-                        <h2>현재 회차</h2>
-                    </div>
-                    <div class="right">
-                        <h3>${book.curPage}</h3>
-                    </div>
-                    <div class="left">
-                        <h2>전체 회차</h2>
-                    </div>
-                    <div class="right">
-                        <h3 class="bookmark-check-page">${book.totalPage}</h3>
-                    </div>
+                        </div>
+                        <div class="left">
+                            <h2>작가</h2>
+                        </div>
+                        <div class="right">
+                            <h3>${book.writer}</h3>
+                        </div>
+                        <div class="left">
+                            <h2>별점</h2>
+                        </div>
+                        <div class="right">
+                            <h3>${book.starRate}</h3>
+                        </div>
+                        <!-- <div class="page"> -->
+                        <div class="left">
+                            <h2>현재 회차</h2>
+                        </div>
+                        <div class="right">
+                            <h3>${book.curPage}</h3>
+                        </div>
+                        <div class="left">
+                            <h2>전체 회차</h2>
+                        </div>
+                        <div class="right">
+                            <h3 class="bookmark-check-page">${book.totalPage}</h3>
+                        </div>
                     <!-- </div> -->
+                    </div>
                 </div>
 
                 <div class="book-comment">
